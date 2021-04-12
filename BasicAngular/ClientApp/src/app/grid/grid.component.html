@@ -1,0 +1,20 @@
+
+
+
+<p *ngIf="!_users"><em>Loading...</em></p>
+
+<div>
+  <button (click)="">Add user</button>
+  <div>
+    
+  </div>
+</div>
+<div *ngIf="_users">
+  <p>done</p>
+  <app-user
+            *ngFor=" let item of _users"
+            [user]="item"
+            (change)="ChangedEvent()">
+
+  </app-user>
+</div>

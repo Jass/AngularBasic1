@@ -1,0 +1,40 @@
+
+
+<hr/>
+<div class="userData">
+  <table>
+    <tbody>
+      <tr>
+        <td width="300"> <p class="name">{{user.firstName }}  {{user.lastName}}</p>
+        <!--<input type="hidden" value="{{user.id}}"/></td>-->
+        <!--<td width="300"> <p>{{user.email}}</p></td>-->
+        <td width="200"><p>{{user.role}}</p></td>
+        <td width="100"><img [src]="getImageActive()" width="25" height="25" /></td>
+        <td width="100"><button (click)="SetViewDetails()">View Details</button></td>
+
+        
+      </tr>
+      <tr>
+        <td *ngIf="viewDetails">
+          <div>
+           <div>
+
+            <div><input type="text" [(ngModel)]="user.firstName" /></div>
+            <div> <input type="text" [(ngModel)]="user.lastName" /></div>
+            <div><input type="text" [(ngModel)]="user.email" /></div>
+            <input type="text" [(ngModel)]="user.role" />
+
+            <button (click)="SaveEvent()">Save</button>
+            <button (click)="DeleteEvent()">Delete</button>
+          </div>
+
+</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+ 
+ 
+  
+  
+</div>
